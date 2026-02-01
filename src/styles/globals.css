@@ -1,0 +1,278 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 18px;
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #00000;
+  --primary: #ff6b00;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f1f1;
+  --secondary-foreground: #ffffff;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --accent: #f1f1f1;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: #f5f5f5;
+  --input-background: #1a1a1a;
+  --switch-background: #333333;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #ff6b00;
+  --chart-1: #ff6b00;
+  --chart-2: #ff8c33;
+  --chart-3: #ffad66;
+  --chart-4: #ffc999;
+  --chart-5: #ffe0cc;
+  --radius: 0.625rem;
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ff6b00;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #262626;
+  --sidebar-ring: #ff6b00;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --primary: #ff6b00;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f1f1;
+  --secondary-foreground: #ffffff;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --accent: #f1f1f1;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: #f5f5f5;
+  --ring: #ff6b00;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #ff6b00;
+  --chart-2: #ff8c33;
+  --chart-3: #ffad66;
+  --chart-4: #ffc999;
+  --chart-5: #ffe0cc;
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ff6b00;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #262626;
+  --sidebar-ring: #ff6b00;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(
+    --sidebar-primary-foreground
+  );
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(
+    --sidebar-accent-foreground
+  );
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+/* Quitar fondo marrón al pasar el cursor */
+nav *:hover,
+.bottom-bar *:hover,
+.menu *:hover,
+div[class*="hamburger"] *:hover {
+  background-color: transparent !important; /* fondo transparente */
+  color: #ff6b00 !important; /* opcional: mantener color naranja al pasar el cursor */
+}
+
+/* 🔝 Forzar cualquier barra superior fija a blanco */
+header,
+div[role="banner"],
+nav[role="navigation"],
+div[class*="top"],
+div[class*="header"],
+div[class*="navbar"],
+div[class*="nav"],
+div[class*="menu"]:has(button) {
+  background-color: #f5f5f5 !important; /* fondo blanco */
+  color: #000000 !important; /* texto negro */
+}
+
+/* También el contenido dentro */
+header *,
+div[role="banner"] *,
+nav[role="navigation"] *,
+div[class*="top"] *,
+div[class*="header"] *,
+div[class*="navbar"] *,
+div[class*="nav"] *,
+div[class*="menu"]:has(button) * {
+  color: #000000 !important;
+}
+
+/* Este cambia el color de fondo de la BARRA INFERIOR (botones Inicio, Trabajos, etc) */
+nav,
+.bottom-nav,
+.bottom-navigation,
+[data-bottom-nav],
+footer.nav {
+  background-color: #f5f5f5 !important; /* ← ESTE ES EL FONDO BLANCO */
+  color: #000000 !important; /* ← ESTE ES EL COLOR DEL TEXTO */
+  border-top: 6px solid #e5e5e5 !important; /* ← ESTE ES EL BORDE SUPERIOR GRIS */
+}
+/*Forzar estilos de la barra inferior */
+.bottom-bar,
+footer,
+nav {
+  background-color: #f5f5f5 !important; /* fondo negro */
+  color: #ff7300 !important; /* texto blanco */
+}
+
+/* Estilo base de botones (negro, negrita, tamaño de fuente) */
+.bottom-bar *,
+footer *,
+nav * {
+  color: #000000 !important;
+  font-size: 13px !important; /* Ajusta el tamaño a tu preferencia */
+  font-weight: bold !important; /* Esto aplica la negrita */
+}
+
+/* Este cambia el color de los ICONOS en las barras de navegación (gris cuando no están activos) */
+.bottom-nav svg,
+.bottom-navigation svg,
+header svg {
+  color: #000000 !important; /* ← ESTE ES EL COLOR DE LOS ICONOS GRISES (Home, Trabajos, etc) */
+}
+
+/* Este cambia el color del ICONO ACTIVO en la barra inferior (naranja) */
+.bottom-nav .active svg,
+.bottom-navigation .active svg,
+.bottom-nav [data-active="true"] svg,
+.bottom-navigation [data-active="true"] svg {
+  color: #ff6b00 !important; /* ← ESTE ES EL COLOR NARANJA DEL ICONO ACTIVO (Home está activo) */
+}
+
+/* Este cambia el color del TEXTO del botón activo en barra inferior */
+.bottom-nav .active,
+.bottom-navigation .active,
+.bottom-nav [data-active="true"],
+.bottom-navigation [data-active="true"] {
+  color: #ff6b00 !important; /* ← ESTE ES EL COLOR NARANJA DEL TEXTO "Home" cuando está activo */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(
+    :not(:has([class*=" text-"]), :not(:has([class^="text-"])))
+  ) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
