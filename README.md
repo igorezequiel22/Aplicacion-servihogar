@@ -45,5 +45,3 @@ Para simular el comportamiento de una app real, la aplicación utiliza el **esta
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
-npm install
-
